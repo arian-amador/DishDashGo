@@ -21,6 +21,7 @@
 - Page: 
 -- Store: raw rendered page and convert it to plain text with all tags removed/simplified.
 -- Parse: Parse to generate the recipe object. I think the easiest way to do this is to use a library like BeautifulSoup to parse the HTML and extract the data we need. Or just make our own targeting the HTML tags (div > id, ul, etc.) we deem useful.
+--- https://github.com/anaskhan96/soup
 
 # Datastructure
 ## Notes: (T: Thought, Q: Question)
