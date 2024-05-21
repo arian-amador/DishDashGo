@@ -27,7 +27,7 @@
         {
             name: "water",
             quantity: 2,
-            unit: 2
+            unit: cups,
             description: "Even though watermelon is mostly water..."
         }
     ]
