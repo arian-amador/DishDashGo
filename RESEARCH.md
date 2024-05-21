@@ -1,8 +1,8 @@
 # Search
 - This is the recipe search page. This URL will return all results and show breadcrumb of next page. 
--- First: https://icecreamfromscratch.com/?s=
--- Next: https://icecreamfromscratch.com/page/2/?s=
--- Last: https://icecreamfromscratch.com/page/23/?s
+  - First: https://icecreamfromscratch.com/?s=
+  - Next: https://icecreamfromscratch.com/page/2/?s=
+  - Last: https://icecreamfromscratch.com/page/23/?s
 
 # Feeds URLs:
 - Content: https://icecreamfromscratch.com/feed/
@@ -13,16 +13,16 @@
 - Get page data then parse it.
 ## Get
 - RSS: This should be used to get the latest recipes from the page daily. 
--- I think all we need are the links to the page themselves. 
+  - I think all we need are the links to the page themselves. 
 - Search: This should be used to get all old the recipes from the site that are not shown in the RSS feed.
--- Process pages using Go routines: https://medium.com/@arnesh07/how-golang-can-save-you-days-of-web-scraping-72f019a6de87
+  - Process pages using Go routines: https://medium.com/@arnesh07/how-golang-can-save-you-days-of-web-scraping-72f019a6de87
 
 ## Parse
 - RSS: Feed parse to get page links.
 - Page: 
--- Store: raw rendered page and convert it to plain text with all tags removed/simplified.
--- Parse: Parse to generate the recipe object. I think the easiest way to do this is to use a library like BeautifulSoup to parse the HTML and extract the data we need. Or just make our own targeting the HTML tags (div > id, ul, etc.) we deem useful.
---- https://github.com/anaskhan96/soup
+  - Store: raw rendered page and convert it to plain text with all tags removed/simplified.
+  - Parse: Parse to generate the recipe object. I think the easiest way to do this is to use a library like BeautifulSoup to parse the HTML and extract the data we need. Or just make our own targeting the HTML tags (div > id, ul, etc.) we deem useful.
+    - https://github.com/anaskhan96/soup
 
 # Datastructure
 ## Notes: (T: Thought, Q: Question)
