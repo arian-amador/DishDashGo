@@ -11,6 +11,16 @@
 
 # Pipeline
 - Get page data then parse it.
+## Get
+- RSS: This should be used to get the latest recipes from the page daily. 
+-- I think all we need are the links to the page themselves. 
+- Search: This should be used to get all old the recipes from the site that are not shown in the RSS feed.
+
+## Parse
+- RSS: Feed parse to get page links.
+- Page: 
+-- Store: raw rendered page and convert it to plain text with all tags removed/simplified.
+-- Parse: Parse to generate the recipe object. I think the easiest way to do this is to use a library like BeautifulSoup to parse the HTML and extract the data we need. Or just make our own targeting the HTML tags (div > id, ul, etc.) we deem useful.
 
 # Datastructure
 ## Notes: (T: Thought, Q: Question)
