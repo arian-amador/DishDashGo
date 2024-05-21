@@ -16,7 +16,7 @@
 ## Notes: (T: Thought, Q: Question)
 - T: Maybe store the raw page content in the database for future reference.
 - T: Some parts of the page are not needed, such as the extended descriptions or further explanation of certain ingredients. Maybe these parts can be condensed or removed.
-- Q: Is there a way to get the page as plain text? This would make parsing easier.
+- Q: Is there a way to get the page as plain text? This would make parsing easier. The HTML tags are not needed for the data we are looking for.
 ```
 {
     name:,
