@@ -5,6 +5,6 @@
 -- Last: https://icecreamfromscratch.com/page/23/?s
 
 # Feeds URLs:
-- https://icecreamfromscratch.com/feed/
+- Content: https://icecreamfromscratch.com/feed/
 - Comments: https://icecreamfromscratch.com/comments/feed/
 - RSS: https://icecreamfromscratch.com/search/feed/rss2/
