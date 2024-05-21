@@ -8,3 +8,34 @@
 - Content: https://icecreamfromscratch.com/feed/
 - Comments: https://icecreamfromscratch.com/comments/feed/
 - RSS: https://icecreamfromscratch.com/search/feed/rss2/
+
+# Pipeline
+- Get page data then parse it.
+
+# Datastructure
+## Notes: (T: Thought, Q: Question)
+- T: Maybe store the raw page content in the database for future reference.
+- T: Some parts of the page are not needed, such as the extended descriptions or further explanation of certain ingredients. Maybe these parts can be condensed or removed.
+- Q: Is there a way to get the page as plain text? This would make parsing easier.
+```
+{
+    name:,
+    imageUrls:[],
+    description:,
+    feeds:,
+    ingredients: [
+        {
+            name: "water",
+            quantity: 2,
+            unit: 2
+            description: "Even though watermelon is mostly water..."
+        }
+    ]
+    instructions: [
+        {
+            step: <maybe we just store this as an array and infer the number from the order of the array. So all we would need is an array of strings.>,
+            description:,
+        }
+    ]
+}
+```
