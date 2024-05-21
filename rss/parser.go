@@ -6,11 +6,18 @@ import (
 	"net/http"
 )
 
-// TODO:: a feed or parser should be a custom type with an interface and methods to read/parse/whatever
+type parser struct {
+	url string
+}
 
-// TODO: We should def not return a string here and something else
-func Parse(rssFeed string) (string, error) {
-	resp, err := http.Get(rssFeed)
+// New method that returns a parser struct
+func NewParser(url string) parser {
+	return(parser{url: url})
+} 
+
+// Method to read and return an rss feed
+func (p *parser) Read() (string, error) {
+	resp, err := http.Get(p.url)
 	if err != nil {
 		return "", err
 	}
