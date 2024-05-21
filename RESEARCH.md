@@ -15,6 +15,7 @@
 - RSS: This should be used to get the latest recipes from the page daily. 
 -- I think all we need are the links to the page themselves. 
 - Search: This should be used to get all old the recipes from the site that are not shown in the RSS feed.
+-- Process pages using Go routines: https://medium.com/@arnesh07/how-golang-can-save-you-days-of-web-scraping-72f019a6de87
 
 ## Parse
 - RSS: Feed parse to get page links.
