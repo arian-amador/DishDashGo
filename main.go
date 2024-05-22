@@ -7,7 +7,17 @@ import (
 )
 
 func main() {
+	data := map[string]interface{}{
+		"name":         "",
+		"imageUrls":    []string{},
+		"description":  "",
+		"serves":       0,
+		"ingredients":  []string{},
+		"instructions": []string{},
+	}
+
 	var waitgroup sync.WaitGroup
+	// RSS will feed this. May connect Amandor's code later.
 	urls := []string{
 		"https://icecreamfromscratch.com/cornbread-ice-cream/",
 		"https://icecreamfromscratch.com/lime-ice-cream/",
@@ -20,7 +30,7 @@ func main() {
 		go func(u string) {
 			defer waitgroup.Done()
 			html := extract.PageHTML(u)
-			transform.ParseHTML(html)
+			transform.ParseHTML(html, data)
 		}(url)
 	}
 	waitgroup.Wait()
