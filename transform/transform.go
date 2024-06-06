@@ -2,14 +2,13 @@ package transform
 
 import (
 	"encoding/json"
-	"fmt"
 	"regexp"
 	"strings"
 
 	"github.com/anaskhan96/soup"
 )
 
-func ParseHTML(html string, data map[string]interface{}) {
+func ParseHTML(html string, data map[string]interface{}) string {
 	doc := soup.HTMLParse(html)
 	title := doc.FindAll("h1")
 	for _, t := range title {
@@ -40,5 +39,5 @@ func ParseHTML(html string, data map[string]interface{}) {
 		data["instructions"] = append(data["instructions"].([]string), insText)
 	}
 	bytes, _ := json.Marshal(data)
-	fmt.Println(string(bytes))
+	return string(bytes)
 }
